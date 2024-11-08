@@ -3,27 +3,35 @@
 public class Main {
     public static void main(String[] args) {
 
-        var clientOS = 3;
-        if (clientOS == 0) {
+        var clientOS = 0;
+        switch (clientOS) {
+            case 1:
+            case 0:
+                if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } if (clientOS == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке");}
-        else
-            System.out.println("Такой ОС нет");
+        } else
+            System.out.println("Установите версию приложения для Android по ссылке");
+        break;
+        default:
+            System.out.println("Такой ОС нет");}
 
 
             var clientDeviceYear = 2013;
-        if (clientOS != 0 && clientOS != 1) {
-            System.out.println("Такой ОС нет");
-        } else if (clientOS == 0) {
+        switch (clientOS) {
+            case 1:
+            case 0:
+         if (clientOS == 0) {
                 if (clientDeviceYear < 2015) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 } else System.out.println("Установите версию приложения для iOS по ссылке");
             } else {
-                if (clientDeviceYear < 2015 && (clientOS ==1 || clientOS ==0)) {
+                if (clientDeviceYear < 2015) {
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 } else System.out.println("Установите версию приложения для Android по ссылке");
             }
+                break;
+            default:
+                System.out.println("Такой ОС нет");}
 
 
 
